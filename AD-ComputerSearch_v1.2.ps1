@@ -1,4 +1,4 @@
-#Searching for multiple computers from Active Directory
+#Searching for multiple computers in Active Directory
 #
 #You may need to modify the script's Path search to reflect where the text file
 #with the computer names is located.
@@ -9,4 +9,4 @@
 #Authored by James Willis
 
 Get-Content -Path c:\tools\ADComputerName.txt | Get-ADComputer -Properties * | Format-Table 
--Property CN, LastLogonDate, DistinguishedName -wrap
+-Property CN, LastLogonDate, DistinguishedName, Enabled -wrap
